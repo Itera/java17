@@ -59,7 +59,16 @@ Immutable data classes with default getters, toString, equals and hash code meth
 
 ## Sealed classes
 
-...
+[SealedTest](src/test/java/com/itera/java17/SealedTest.java),
+[beforesealed](src/main/java/com/itera/java17/beforesealed) and
+[sealed](src/main/java/com/itera/java17/sealed)
+
+Keywords:
+
+* final
+* sealed
+* non-sealed
+* permits
 
 ## JEP overview
 
