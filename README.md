@@ -8,6 +8,10 @@ Some simple examples of:
 * Records
 * Sealed classes
 
+## JEP list - changes from 11 to 17
+
+https://openjdk.java.net/projects/jdk/17/jeps-since-jdk-11
+
 ## Text Blocks
 
 [TextBlockTest](src/test/java/com/itera/java17/TextBlockTest.java)
@@ -69,8 +73,4 @@ Keywords:
 * sealed
 * non-sealed
 * permits
-
-## JEP overview
-
-...
 
