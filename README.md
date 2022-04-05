@@ -19,6 +19,39 @@ https://openjdk.java.net/projects/jdk/17/jeps-since-jdk-11
 * Multiline strings
 * Common (on every line) leading space/indent ignored
 
+### Extra bits:
+
+#### Suppress line break at end of line
+
+```java
+String literal = "Lorem ipsum dolor sit amet, consectetur adipiscing " +
+                 "elit, sed do eiusmod tempor incididunt ut labore " +
+                 "et dolore magna aliqua.";
+```
+
+```java
+String text = """
+Lorem ipsum dolor sit amet, consectetur adipiscing \
+elit, sed do eiusmod tempor incididunt ut labore \
+et dolore magna aliqua.\
+""";
+```
+
+#### Space at end of line
+
+Similarly, \s can be used to force a space at end of line
+
+#### Interpolation
+
+A text block is just a normal java String - so there is no inbuilt interpolation.
+You can use String.format() or formatted():
+
+```java
+"""
+Foo: %s
+""".formatted(strVar)
+```
+
 ## instanceof pattern matching
 
 [InstanceOfPatternMatchingTest](src/test/java/com/itera/java17/InstanceOfPatternMatchingTest.java) and
@@ -50,9 +83,9 @@ if (o instanceof X x && x.someGetter() > someValue) {
 [SwitchExpressionTest](src/test/java/com/itera/java17/SwitchExpressionTest.java) and
 [ToString](src/main/java/com/itera/java17/ToString.java)
 
-JDK 17 has this in preview
+JDK 17 has switch expressions in releae and also has pattern matching for switch in preview
 
-* Switch gets new syntax and can use pattern match on the case section
+* Switch gets new syntax and can use pattern match (preview) on the case section
 * Switch statement can return a value
 
 ## Records
@@ -60,6 +93,17 @@ JDK 17 has this in preview
 [RecordTest](src/test/java/com/itera/java17/RecordTest.java)
 
 Immutable data classes with default getters, toString, equals and hash code methods.
+
+
+### Notes:
+
+*  Cannot be extended
+*  Can implement interfaces
+*  Values are immutable - and cannot be changed
+*  Default constructor/toString/equals/hashcode can be overridden
+*  Can have other methods on the object - as long as they do not change the values
+*  Cannot have other instance variables
+*  Very similar to Lombok @Value - except that you cannot override the finality with @NonFinal
 
 ## Sealed classes
 

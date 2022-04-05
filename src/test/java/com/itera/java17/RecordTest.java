@@ -24,14 +24,4 @@ public class RecordTest {
         // Provides a sensible default toString
         assertEquals("TestRecord[name=Test, value=1]", testRecord.toString());
     }
-
-    // Notes:
-
-    // Cannot be extended
-    // Can implement interfaces
-    // Values are immutable - and cannot be changed
-    // Default constructor/toString/equals/hashcode can be overridden
-    // Can have other methods on the object - as long as they do not change the values
-    // Cannot have other instance variables
-    // Very similar to Lombok @Value - except that you cannot override the finality with @NonFinal
 }
