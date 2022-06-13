@@ -11,6 +11,18 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SwitchExpressionTest {
+    @Test
+    void testSwitchExpression() {
+        assertEquals(true, Day.SATURDAY.isWeekendOldStyle());
+        assertEquals(true, Day.SATURDAY.isWeekend());
+        assertEquals(true, Day.SATURDAY.isWeekendUsingDefault());
+
+        assertEquals(false, Day.THURSDAY.isWeekendOldStyle());
+        assertEquals(false, Day.THURSDAY.isWeekend());
+        assertEquals(false, Day.THURSDAY.isWeekendUsingDefault());
+    }
+
+
     @ParameterizedTest
     @MethodSource("valuesForTest")
     void testInstanceOfFormatter(String name, Object value, String expectedResult) {

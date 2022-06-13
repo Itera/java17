@@ -30,8 +30,8 @@ public class ToString {
         String formattedValue = switch (value) {
             case null -> "NULL";
             case Integer i -> i.toString();
-            case Long l -> l.toString() + "L";
-            case Double d -> d.toString() + "D";
+            case Long l -> l + "L";
+            case Double d -> d + "D";
             case String s -> s;
             default -> value.toString();
         };

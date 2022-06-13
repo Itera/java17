@@ -83,10 +83,12 @@ if (o instanceof X x && x.someGetter() > someValue) {
 [SwitchExpressionTest](src/test/java/com/itera/java17/SwitchExpressionTest.java) and
 [ToString](src/main/java/com/itera/java17/ToString.java)
 
-JDK 17 has switch expressions in releae and also has pattern matching for switch in preview
+JDK 17 has switch expressions in release and also has pattern matching for switch in preview
 
-* Switch gets new syntax and can use pattern match (preview) on the case section
-* Switch statement can return a value
+* Switch gets new syntax (arrow notation) that makes it an expression rather than a statement
+* Switch expression can therefore return a value
+* When using expression syntax there is no fallthrough to the next case.
+* Switch expression and can use pattern match (this is in preview) on the case section
 
 ## Records
 
