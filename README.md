@@ -87,7 +87,10 @@ JDK 17 has switch expressions in release and also has pattern matching for switc
 
 * Switch gets new syntax (arrow notation) that makes it an expression rather than a statement
 * Switch expression can therefore return a value
-* When using expression syntax there is no fallthrough to the next case.
+* When using expression syntax there is no fallthrough to the next case
+* If you need a code block rather then "yield" the result (keyword)
+* You can also use the old ":" syntax with yield (but why would you?)
+* A switch expression _must_ be exhaustive
 * Switch expression and can use pattern match (this is in preview) on the case section
 
 ## Records
